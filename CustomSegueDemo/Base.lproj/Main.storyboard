@@ -25,7 +25,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Show"/>
                                 <connections>
-                                    <segue destination="8rM-hq-o6T" kind="custom" customClass="ModalCardSegue" customModule="CustomSegueDemo" customModuleProvider="target" id="YQx-OT-T8Q"/>
+                                    <segue destination="8rM-hq-o6T" kind="custom" customClass="BottomCardSegue" customModule="CustomSegueDemo" customModuleProvider="target" id="2B1-pE-7lz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUb-6M-7Pn">
@@ -33,11 +33,11 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="Show Programatically"/>
                                 <connections>
-                                    <action selector="showProgramatically:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EdK-9S-Zcj"/>
+                                    <action selector="showProgrammatically:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EdK-9S-Zcj"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.016804177310000001" green="0.87417588229999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.015686274509803921" green="0.80000000000000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="HUb-6M-7Pn" firstAttribute="top" secondItem="Ldc-0V-luT" secondAttribute="bottom" constant="20" id="Pwg-jD-aFk"/>
                             <constraint firstItem="Ldc-0V-luT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zgx-92-LPO"/>
@@ -65,7 +65,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JZb-Ld-EEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="934" y="33"/>
+            <point key="canvasLocation" x="751" y="34"/>
         </scene>
         <!--Parent-->
         <scene sceneID="FQJ-HS-3Vb">
@@ -150,7 +150,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TAj-xN-YOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1830" y="33"/>
+            <point key="canvasLocation" x="1508" y="34"/>
         </scene>
         <!--Child-->
         <scene sceneID="9Wu-IY-Cyb">
@@ -181,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekF-96-SGo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2649" y="34"/>
+            <point key="canvasLocation" x="2274" y="34"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

@@ -13,7 +13,7 @@
 		22B0ABE020D1CC8E00E290EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22B0ABDF20D1CC8E00E290EC /* Assets.xcassets */; };
 		22B0ABE320D1CC8E00E290EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B0ABE120D1CC8E00E290EC /* LaunchScreen.storyboard */; };
 		22B0ABEE20D1CC8E00E290EC /* CustomSegueDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0ABED20D1CC8E00E290EC /* CustomSegueDemoTests.swift */; };
-		22B0ABF920D1CCA200E290EC /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0ABF820D1CCA200E290EC /* CustomSegue.swift */; };
+		22B0ABF920D1CCA200E290EC /* BottomCardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B0ABF820D1CCA200E290EC /* BottomCardSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 		22B0ABE920D1CC8E00E290EC /* CustomSegueDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CustomSegueDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B0ABED20D1CC8E00E290EC /* CustomSegueDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegueDemoTests.swift; sourceTree = "<group>"; };
 		22B0ABEF20D1CC8E00E290EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22B0ABF820D1CCA200E290EC /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
+		22B0ABF820D1CCA200E290EC /* BottomCardSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +81,7 @@
 			children = (
 				22B0ABDC20D1CC8B00E290EC /* Main.storyboard */,
 				22B0ABDA20D1CC8B00E290EC /* ViewController.swift */,
-				22B0ABF820D1CCA200E290EC /* CustomSegue.swift */,
+				22B0ABF820D1CCA200E290EC /* BottomCardSegue.swift */,
 				22B0ABD820D1CC8B00E290EC /* AppDelegate.swift */,
 				22B0ABDF20D1CC8E00E290EC /* Assets.xcassets */,
 				22B0ABE120D1CC8E00E290EC /* LaunchScreen.storyboard */,
@@ -201,7 +201,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22B0ABDB20D1CC8B00E290EC /* ViewController.swift in Sources */,
-				22B0ABF920D1CCA200E290EC /* CustomSegue.swift in Sources */,
+				22B0ABF920D1CCA200E290EC /* BottomCardSegue.swift in Sources */,
 				22B0ABD920D1CC8B00E290EC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
