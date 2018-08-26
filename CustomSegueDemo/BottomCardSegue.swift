@@ -41,15 +41,20 @@ extension BottomCardSegue: UIViewControllerAnimatedTransitioning {
         case .some:
             let container = transitionContext.containerView
             let toView = transitionContext.view(forKey: .to)!
+            let toViewController = transitionContext.viewController(forKey: .to)!
             // Configure the layout
             do {
                 toView.translatesAutoresizingMaskIntoConstraints = false
                 container.addSubview(toView)
-                container.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: toView.bottomAnchor).isActive = true
+                // Specify a minimum 20pt bottom margin
+                let bottom = max(20 - toView.safeAreaInsets.bottom, 0)
+                container.safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: toView.bottomAnchor, constant: bottom).isActive = true
                 container.safeAreaLayoutGuide.leadingAnchor.constraint(equalTo: toView.leadingAnchor, constant: -20).isActive = true
                 container.safeAreaLayoutGuide.trailingAnchor.constraint(equalTo: toView.trailingAnchor, constant: 20).isActive = true
-                // Specify a height constraint because our view controller's intrinsic height is zero.
-                toView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+                // Respect `toViewController.preferredContentSize.height` if non-zero.
+                if toViewController.preferredContentSize.height > 0 {
+                    toView.heightAnchor.constraint(equalToConstant: toViewController.preferredContentSize.height).isActive = true
+                }
             }
             // Apply some styling
             do {

@@ -55,6 +55,7 @@
         <scene sceneID="j3D-yj-JGW">
             <objects>
                 <navigationController storyboardIdentifier="Child" id="8rM-hq-o6T" sceneMemberID="viewController">
+                    <value key="contentSizeForViewInPopover" type="size" width="0.0" height="200"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nhF-J8-pFy">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
