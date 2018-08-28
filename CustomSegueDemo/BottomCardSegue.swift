@@ -10,6 +10,7 @@ import UIKit
 
 class BottomCardSegue: UIStoryboardSegue {
 
+    // Need to retain self until dismissal because UIKit won't.
     private var selfRetainer: BottomCardSegue? = nil
 
     override func perform() {
@@ -33,10 +34,12 @@ extension BottomCardSegue: UIViewControllerTransitioningDelegate {
 
 extension BottomCardSegue: UIViewControllerAnimatedTransitioning {
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        // Use `selfRetainer` to determine if we're presenting or dismissing
         return selfRetainer == nil ? 0.2 : 0.5
     }
 
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        // Use `selfRetainer` to determine if we're presenting or dismissing
         switch selfRetainer {
         case .some:
             let container = transitionContext.containerView
