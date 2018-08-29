@@ -23,25 +23,21 @@ class BottomCardSegue: UIStoryboardSegue {
 
 extension BottomCardSegue: UIViewControllerTransitioningDelegate {
     public func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return self
+        return Presenter()
     }
 
     public func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         selfRetainer = nil
-        return self
-    }
-}
-
-extension BottomCardSegue: UIViewControllerAnimatedTransitioning {
-    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        // Use `selfRetainer` to determine if we're presenting or dismissing
-        return selfRetainer == nil ? 0.2 : 0.5
+        return Dismisser()
     }
 
-    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        // Use `selfRetainer` to determine if we're presenting or dismissing
-        switch selfRetainer {
-        case .some:
+    private class Presenter: NSObject, UIViewControllerAnimatedTransitioning {
+
+        func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+            return 0.5
+        }
+
+        func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
             let container = transitionContext.containerView
             let toView = transitionContext.view(forKey: .to)!
             let toViewController = transitionContext.viewController(forKey: .to)!
@@ -75,7 +71,16 @@ extension BottomCardSegue: UIViewControllerAnimatedTransitioning {
                     transitionContext.completeTransition(completed)
                 }
             }
-        case .none:
+        }
+    }
+
+    private class Dismisser: NSObject, UIViewControllerAnimatedTransitioning {
+
+        func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+            return 0.2
+        }
+
+        func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
             let container = transitionContext.containerView
             let fromView = transitionContext.view(forKey: .from)!
             UIView.animate(withDuration: 0.2, animations: {
@@ -86,5 +91,6 @@ extension BottomCardSegue: UIViewControllerAnimatedTransitioning {
         }
     }
 }
+
 
 
